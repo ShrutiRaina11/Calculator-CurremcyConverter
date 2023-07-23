@@ -1,17 +1,3 @@
-// // Get the elements
-// const toggleButton = document.getElementById('toggleButton');
-// const calculator = document.getElementById('calculator');
-
-// // Function to toggle the calculator visibility
-// function toggleCalculator() {
-//   calculator.style.display = calculator.style.display === 'none' ? 'block' : 'none';
-// }
-
-// // Add event listener to the toggle button
-// toggleButton.addEventListener('click', toggleCalculator);
-
-// Rest of the JavaScript code remains the same as before
-
 // Get the elements
 const cal = document.getElementById('Cal');
 const exg = document.getElementById('Exg');
