@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator with Button</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="button-wrapper">
+      <a id="Cal" class="btnChoose" href="#">Calculator</a>
+      <a id="Exg" class="btnChoose" href="#">Exchange Rate</a>
+    </div>
+    <div class="calculator" id="calculator">
+      <input type="text" id="display" readonly>
+      <div class="calculatorButtons">
+        <!-- Calculator buttons as before -->
+        <button class="operator btnCal">C</button>
+        <button class="operator btnCal">%</button>
+        <button class="operator btnCal">CE</button>
+        <button class="operator btnCal">/</button>
+        <button class="number btnCal">7</button>
+        <button class="number btnCal">8</button>
+        <button class="number btnCal">9</button>
+        <button class="operator btnCal">*</button>
+        <button class="number btnCal">4</button>
+        <button class="number btnCal">5</button>
+        <button class="number btnCal">6</button>
+        <button class="operator btnCal">-</button>
+        <button class="number btnCal">1</button>
+        <button class="number btnCal">2</button>
+        <button class="number btnCal">3</button>
+        <button class="operator btnCal">+</button>
+        <button class="number btnCal">00</button>
+        <button class="number btnCal">0</button>
+        <button class="operator btnCal">.</button>
+        <button class="operator btnCal">=</button>
+      </div>
+    </div>
+    <div class="calculator" id="exgRate">
+      <input type="text" id="convert1" readonly>
+      <input type="text" id="convert2" readonly>
+      <div class="exchangeButtons">
+        <!-- Calculator buttons as before -->
+        <button id="n7" class="number btnExg">7</button>
+        <button id="n8" class="number btnExg">8</button>
+        <button id="n9" class="number btnExg">9</button>
+        <button id="C" class="operator btnExg">C</button>
+        <button id="n4" class="number btnExg">4</button>
+        <button id="n5" class="number btnExg">5</button>
+        <button id="n6" class="number btnExg">6</button>
+        <button id="n1" class="number btnExg">1</button>
+        <button id="n2" class="number btnExg">2</button>
+        <button id="n3" class="number btnExg">3</button>
+        <button id="n00" class="number btnExg">00</button>
+        <button id="n0" class="number btnExg">0</button>
+        <button id="npt" class="operator btnExg">.</button>
+        <button id="CE" class="operator btnExg">CE</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
