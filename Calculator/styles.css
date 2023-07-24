@@ -7,12 +7,19 @@ body {
   background-color: #f2f2f2;
 }
 
-.btnChoose {
-  font-size: 21px;
-  border: none;
+.calExgWrapper{
+  margin: 8px;
 }
 
-.calculator {
+.calExgChoose {
+  font-size: 23px;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  margin: 3px 32px 3px 32px;
+}
+
+.calExg {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -21,7 +28,7 @@ body {
 }
 
 #display {
-  /* width: 100%; */
+  width: 94%;
   height: 40px;
   font-size: 24px;
   text-align: right;
@@ -37,13 +44,23 @@ body {
   grid-gap: 5px;
 }
 
+.btnCal {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
 #exgRate {
   display: none;
+  width: 68%;
 }
 
 .exchangeButtons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 97px);
   grid-template-areas:
   "n7 n8 n9 C" 
   "n4 n5 n6 sp"
@@ -107,7 +124,24 @@ body {
 #CE {
   grid-area: CE;
 }
-button {
+
+select {
+  padding: 5px;
+  margin: 0px 5px 8px 5px;
+  font-size: 15px;
+  color: black;
+  font-weight: 600;
+}
+
+.exgInput{
+  border: none;
+  text-align: end;
+  font-size: 18px;
+  width: 15%;
+  font-weight: 700;
+}
+
+.btnExg {
   font-size: 20px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -120,8 +154,19 @@ button {
   background-color: #d4d4d4;
 }
 
+a:hover,a:active {
+  text-decoration: underline;
+  color: #5f3c3c;
+  font-weight: 700;
+}
+
+.exgInput:hover{
+  color: #dfb133;
+  border: none;
+}
+
 button:hover {
-  background-color: #e4e4e4;
+  background-color: #dfb133;
 }
 
 button:active {

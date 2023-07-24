@@ -7,18 +7,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="calculator-container">
-    <div class="button-wrapper">
-      <a id="Cal" class="btnChoose" href="#">Calculator</a>
-      <a id="Exg" class="btnChoose" href="#">Exchange Rate</a>
+  <!-- main container -->
+  <div class="calExgContainer">
+
+    <!-- Links to toogle betwen Calculator and Echange Rate -->
+    <div class="calExgWrapper">
+      <a id="Cal" class="calExgChoose" href="#">Calculator</a>
+      <a id="Exg" class="calExgChoose" href="#">Exchange Rate</a>
     </div>
-    <div class="calculator" id="calculator">
+
+    <!-- Div for Calculator -->
+    <div class="calExg" id="calculator">
       <input type="text" id="display" readonly>
+      
+      <!-- Calculator buttons -->
       <div class="calculatorButtons">
-        <!-- Calculator buttons -->
         <button class="operator btnCal">C</button>
+        <button class="operator btnCal">DEL</button>
         <button class="operator btnCal">%</button>
-        <button class="operator btnCal">CE</button>
         <button class="operator btnCal">/</button>
         <button class="number btnCal">7</button>
         <button class="number btnCal">8</button>
@@ -38,11 +44,24 @@
         <button class="operator btnCal">=</button>
       </div>
     </div>
-    <div class="calculator" id="exgRate">
-      <input type="text" id="convert1" readonly>
-      <input type="text" id="convert2" readonly>
+
+    <!-- Div for Exchange Rate -->
+    <div class="calExg" id="exgRate">
+      <div class="exgInfo">
+        <select id="firstCur" name="firstCur" onchange="handleChange()"> 
+          <!-- <option value="inr">inr</option> -->
+        </select>
+        <input type="number" id="coverterAmount1" class="exgInput" placeholder="0.0" readonly onclick="updateFocus('coverterAmount1')">
+      </div>
+      <div class="exgInfo">
+        <select id="secondCur" name="secondCur" onchange="handleChange()">
+          <!-- <option value="usd">usd</option> -->
+        </select>
+        <input type="number" id="coverterAmount2" class="exgInput" placeholder="0.0" readonly onclick="updateFocus('coverterAmount2')">
+      </div>
+      
+      <!-- Exchange Rate buttons -->
       <div class="exchangeButtons">
-        <!-- Exchange Rate buttons -->
         <button id="n7" class="number btnExg">7</button>
         <button id="n8" class="number btnExg">8</button>
         <button id="n9" class="number btnExg">9</button>
@@ -56,10 +75,11 @@
         <button id="n00" class="number btnExg">00</button>
         <button id="n0" class="number btnExg">0</button>
         <button id="npt" class="operator btnExg">.</button>
-        <button id="CE" class="operator btnExg">CE</button>
+        <button id="CE" class="operator btnExg">DEL</button>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="calculator.js"></script>
+  <script src="exgRate.js"></script>
 </body>
 </html>
