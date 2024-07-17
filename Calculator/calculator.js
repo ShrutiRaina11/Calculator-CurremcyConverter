@@ -61,7 +61,7 @@ buttonsCal.forEach(button => {
     if (buttonText === '=') {
       calculateResult();
     } 
-    else if (buttonText === 'C') {
+    else if (buttonText === 'AC') {
       clearCalDisplay();
     } 
     else if (buttonText === 'DEL') {

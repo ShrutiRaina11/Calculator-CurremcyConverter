@@ -126,35 +126,35 @@ function handleChange(){
 }
 
 // Add event listeners to the exgRate buttons
-  const buttonsExg = document.querySelectorAll(".btnExg");
-  buttonsExg.forEach(button =>{
-    button.addEventListener('click', () => {
-      const buttonText = button.textContent;
-      if(activeElement === 'coverterAmount2'){
-        if (buttonText === 'C') {
-          clearExgDisplay();
-        }
-        else if (buttonText === 'DEL') {
-          deleteExgLastChar(coverterAmount2);
-          convertCurrency(coverterAmount2, secondCur, firstCur, coverterAmount1)
-        }
-        else{
-          updateExgDisplay(coverterAmount2,buttonText);
-          convertCurrency(coverterAmount2, secondCur, firstCur, coverterAmount1)
-        }
+const buttonsExg = document.querySelectorAll(".btnExg");
+buttonsExg.forEach(button =>{
+  button.addEventListener('click', () => {
+    const buttonText = button.textContent;
+    if(activeElement === 'coverterAmount2'){
+      if (buttonText === 'AC') {
+        clearExgDisplay();
+      }
+      else if (buttonText === 'DEL') {
+        deleteExgLastChar(coverterAmount2);
+        convertCurrency(coverterAmount2, secondCur, firstCur, coverterAmount1)
       }
       else{
-        if (buttonText === 'C') {
-          clearExgDisplay();
-        }
-        else if (buttonText === 'CE') {
-          deleteExgLastChar(coverterAmount1);
-          convertCurrency(coverterAmount1, firstCur, secondCur, coverterAmount2)
-        }
-        else{
-          updateExgDisplay(coverterAmount1,buttonText);
-          convertCurrency(coverterAmount1, firstCur, secondCur, coverterAmount2)
-        }
+        updateExgDisplay(coverterAmount2,buttonText);
+        convertCurrency(coverterAmount2, secondCur, firstCur, coverterAmount1)
       }
-    })
+    }
+    else{
+      if (buttonText === 'AC') {
+        clearExgDisplay();
+      }
+      else if (buttonText === 'DEL') {
+        deleteExgLastChar(coverterAmount1);
+        convertCurrency(coverterAmount1, firstCur, secondCur, coverterAmount2)
+      }
+      else{
+        updateExgDisplay(coverterAmount1,buttonText);
+        convertCurrency(coverterAmount1, firstCur, secondCur, coverterAmount2)
+      }
+    }
+  })
   });
